@@ -1,7 +1,7 @@
 -- 0 ADMINISTRADOR
 -- 1 CONSUMIDOR
 
--- CONSUMIDOR
+-- USUÁRIO
 
 INSERT INTO Usuario
     (username, password, tipo) 
@@ -16,6 +16,8 @@ INSERT INTO Usuario
     ('elias.alexandre', '123', 0),
     ('marli.evelyn', '123', 0),
     ('isabel.patricia', '123', 0);
+
+-- CONSUMIDOR
 
 INSERT INTO Consumidor
     (cpf, nome, sexo, idade, fk_username_usuario) 
@@ -40,19 +42,26 @@ INSERT INTO Administrador(nome, tipo, fk_username_usuario)
 	('Marli Evelyn Esther Rodrigues', 1, 'marli.evelyn'),
 	('Isabel Patrícia Kamilly da Silva', 1, 'isabel.patricia');
 
-INSERT INTO Categoria(nome) VALUES('Categoria A');
-INSERT INTO Categoria(nome) VALUES('Categoria B');
-INSERT INTO Categoria(nome) VALUES('Categoria C');
-INSERT INTO Categoria(nome) VALUES('Categoria D');
-INSERT INTO Categoria(nome) VALUES('Categoria E');
+-- CATEGORIA
+
+INSERT INTO Categoria(nome)
+	VALUES
+	('Categoria A'),
+	('Categoria B'),
+	('Categoria C'),
+	('Categoria D'),
+	('Categoria E');
+
+-- CARDÁPIO
 
 
-INSERT INTO Cardapio(nome, descricao, valor, promocao, estrelas, fk_codigo_categoria) VALUES('Prato A', 'Prato Simples 1', 54.23, FALSE, 1)
-    INSERT INTO Cardapio(nome, descricao, valor, promocao, estrelas, fk_codigo_categoria) VALUES('Prato B', 'Prato Simples 2', 51.23, FALSE, 1),
-    INSERT INTO Cardapio(nome, descricao, valor, promocao, estrelas, fk_codigo_categoria) VALUES('Prato C', 'Prato Simples 3', 52.23, FALSE, 1),
-    INSERT INTO Cardapio(nome, descricao, valor, promocao, estrelas, fk_codigo_categoria) VALUES('Prato D', 'Prato Simples 4', 53.23, FALSE, 1),
-    INSERT INTO Cardapio(nome, descricao, valor, promocao, estrelas, fk_codigo_categoria) VALUES('Prato E', 'Prato Simples 5', 55.23, FALSE, 1);
-
+INSERT INTO Cardapio(nome, descricao, valor, promocao, estrelas, fk_codigo_categoria) 
+	VALUES
+	('Prato A', 'Prato Simples 1', 54.23, FALSE, 4, 1),
+    	('Prato B', 'Prato Simples 2', 51.23, FALSE, 5, 2),
+    	('Prato C', 'Prato Simples 3', 52.23, FALSE, 5, 3),
+    	('Prato D', 'Prato Simples 4', 53.23, FALSE, 4, 4),
+    	('Prato E', 'Prato Simples 5', 55.23, FALSE, 4, 5);
 
 
 
