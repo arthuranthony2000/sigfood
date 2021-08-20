@@ -24,6 +24,7 @@ CREATE TABLE Cartao_Fidelidade(
 );
 
 CREATE TABLE Administrador(
+	nome VARCHAR(100) NOT NULL,
 	codigo SERIAL,
 	tipo INTEGER NOT NULL,
 	fk_username_usuario VARCHAR(40) NOT NULL,
@@ -136,17 +137,5 @@ CREATE TABLE Cardapio_Ingrediente(
 	FOREIGN KEY(fk_codigo_cardapio) REFERENCES Cardapio(codigo),
 	FOREIGN KEY(fk_codigo_ingrediente) REFERENCES Ingrediente(codigo)
 );
-
-
-
-
-
-
-
-
-
-
-
-
 
 

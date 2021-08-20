@@ -3,28 +3,6 @@
 
 -- CONSUMIDOR
 
-INSERT INTO Usuario(username, password, tipo) VALUES('bianca.andreia', '123', 1)
-INSERT INTO Consumidor(cpf, nome, sexo, idade, fk_username_usuario) VALUES('466.539.997-26','Bianca Andreia Rocha', 'Feminino', 32, 'bianca.andreia')
-
-INSERT INTO Usuario(username, password, tipo) VALUES('thales.pedro', '123', 1)
-INSERT INTO Consumidor(cpf, nome, sexo, idade, fk_username_usuario) VALUES('944.345.122-00','Thales Pedro Diogo Assunção', 'Masculino', 32, 'thales.pedro')
-
-INSERT INTO Usuario(username, password, tipo) VALUES('valentina.giovana', '123', 1)
-INSERT INTO Consumidor(cpf, nome, sexo, idade, fk_username_usuario) VALUES('248.934.605-95','Valentina Giovana Corte Real', 'Feminino', 20, 'valentina.giovana')
-
-INSERT INTO Usuario(username, password, tipo) VALUES('miguel.murilo', '123', 1)
-INSERT INTO Consumidor(cpf, nome, sexo, idade, fk_username_usuario) VALUES('037.412.268-74','Miguel Murilo Pires', 'Masculino', 25, 'miguel.murilo')
-
-INSERT INTO Usuario(username, password, tipo) VALUES('gustavo.caio', '123', 1)
-INSERT INTO Consumidor(cpf, nome, sexo, idade, fk_username_usuario) VALUES('148.506.661-16','Gustavo Caio Nunes', 'Masculino', 28, 'gustavo.caio')
-
----------------------------------------------------------------------------------------
-
--- 0 ADMINISTRADOR
--- 1 CONSUMIDOR
-
--- CONSUMIDOR
-
 INSERT INTO Usuario
     (username, password, tipo) 
     VALUES
@@ -54,21 +32,13 @@ INSERT INTO Consumidor
 -- 0 AGENTE DE TECNOLOGIA
 -- 1 ASSISTENTE ADMINISTRATIVO
 
-INSERT INTO Usuario(username, password, tipo) VALUES('sergio.thales', '123', 0)
-INSERT INTO Administrador(nome, tipo, fk_username_usuario) VALUES('Sérgio Thales Lucca Melo', 0, 'sergio.thales')
-
-INSERT INTO Usuario(username, password, tipo) VALUES('rosa.marlene', '123', 0)
-INSERT INTO Administrador(nome, tipo, fk_username_usuario) VALUES('Rosa Marlene Giovana Araújo', 0, 'rosa.marlene')
-
-INSERT INTO Usuario(username, password, tipo) VALUES('elias.alexandre', '123', 0)
-INSERT INTO Administrador(nome, tipo, fk_username_usuario) VALUES('Elias Alexandre Cavalcanti', 0, 'elias.alexandre')
-
-INSERT INTO Usuario(username, password, tipo) VALUES('marli.evelyn', '123', 0)
-INSERT INTO Administrador(nome, tipo, fk_username_usuario) VALUES('Marli Evelyn Esther Rodrigues', 1, 'marli.evelyn')
-
-INSERT INTO Usuario(username, password, tipo) VALUES('isabel.patricia', '123', 0)
-INSERT INTO Administrador(nome, tipo, fk_username_usuario) VALUES('Isabel Patrícia Kamilly da Silva', 1, 'isabel.patricia')
-
+INSERT INTO Administrador(nome, tipo, fk_username_usuario)
+	VALUES
+	('Sérgio Thales Lucca Melo', 0, 'sergio.thales'),
+	('Rosa Marlene Giovana Araújo', 0, 'rosa.marlene'),
+	('Elias Alexandre Cavalcanti', 0, 'elias.alexandre'),
+	('Marli Evelyn Esther Rodrigues', 1, 'marli.evelyn'),
+	('Isabel Patrícia Kamilly da Silva', 1, 'isabel.patricia');
 
 INSERT INTO Categoria(nome) VALUES('Categoria A');
 INSERT INTO Categoria(nome) VALUES('Categoria B');
