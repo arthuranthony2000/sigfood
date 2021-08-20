@@ -51,6 +51,29 @@ INSERT INTO Administrador(nome, tipo, fk_username_usuario)
 	('Marli Evelyn Esther Rodrigues', 1, 'marli.evelyn'),
 	('Isabel Patrícia Kamilly da Silva', 1, 'isabel.patricia');
 
+-- GRUPO
+
+INSERT INTO Grupo(nome, descricao, data_criacao)
+	VALUES
+	('Grupo A', 'Grupo Adminstrativo 1', now()),
+	('Grupo B', 'Grupo Adminstrativo 2', now()),
+	('Grupo C', 'Grupo Adminstrativo 3', now()),
+	('Grupo D', 'Grupo Adminstrativo 4', now()),
+	('Grupo E', 'Grupo Adminstrativo 5', now());
+
+-- ADMIN GRUPO
+
+INSERT INTO Admin_Grupo(Data_Admissao, fk_codigo_admin, fk_codigo_grupo)
+	VALUES
+	(now(), 1, 1),
+	(now(), 1, 2),
+	(now(), 2, 1),
+	(now(), 2, 2),
+	(now(), 3, 2),
+	(now(), 3, 3),
+	(now(), 4, 4),
+	(now(), 4, 5);
+
 -- CATEGORIA
 
 INSERT INTO Categoria(nome)
@@ -80,6 +103,21 @@ INSERT INTO Ingrediente(nome)
     ('ingrediente03'), ('ingrediente04'), 
     ('ingrediente05'), ('ingrediente06'), 
     ('ingrediente07'), ('ingrediente08');
+
+-- CARDÁPIO_INGREDIENTE
+
+INSERT INTO Cardapio_Ingrediente(fk_codigo_cardapio, fk_codigo_ingrediente)
+	VALUES
+	(1, 1),
+	(1, 2),
+	(2, 2),
+	(2, 3),
+	(3, 3),
+	(3, 4),
+	(4, 4),
+	(4, 5),
+	(5, 5),
+	(5, 6);
 
 -- COMBO
 
