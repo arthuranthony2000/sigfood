@@ -25,7 +25,6 @@ CREATE TABLE Cartao_Fidelidade(
 
 CREATE TABLE Administrador(
 	codigo SERIAL,
-	nome VARCHAR(20),
 	tipo INTEGER NOT NULL,
 	fk_username_usuario VARCHAR(40) NOT NULL,
 	PRIMARY KEY(codigo),
@@ -34,7 +33,7 @@ CREATE TABLE Administrador(
 
 CREATE TABLE Grupo(
 	codigo SERIAL,
-	nome VARCHAR(20) NOT NULL,
+	nome VARCHAR(100) NOT NULL,
 	descricao TEXT NOT NULL,
 	data_criacao DATE NOT NULL,
 	PRIMARY KEY(codigo)
@@ -94,7 +93,7 @@ CREATE TABLE Categoria(
 
 CREATE TABLE Cardapio(
 	codigo SERIAL,
-	nome VARCHAR(40) NOT NULL,
+	nome VARCHAR(100) NOT NULL,
 	descricao TEXT NOT NULL,
 	valor FLOAT NOT NULL,
 	promocao BOOLEAN NOT NULL,
