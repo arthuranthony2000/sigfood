@@ -138,11 +138,37 @@ INSERT INTO Key(valor, codigo_admin)
 	('a2b453013abb1da3e1eab65a3f28c338', 3), -- PERMISSÃO 003
 	('ce053a95277219c9b3f6724c222a1565', 4), -- PERMISSÃO 004
 	('caef1a04e10a29bde33b90d6ef8bae83', 5); -- PERMISSÃO 005
-	
+
+-- NOTA DE PAGAMENTO
+
+INSERT INTO Nota_de_Pagamento(valor_total, data_criacao)
+	VALUES
+	(108.46, now()),
+	(106.46, now()),
+	(105.46, now()),
+	(108.46, now()),
+	(112.46, now());
 
 
+-- PEDIDO
 
+INSERT INTO Pedido(valor, hora_inicial, data, finalizado, fk_cpf_consumidor, fk_username_usuario, fk_codigo_nota_de_pagamento)
+	VALUES
+	(105.46, now(), now(), FALSE, '466.539.997-26', 'bianca.andreia', 1), -- 1-2
+	(103.46, now(), now(), FALSE, '944.345.122-00', 'thales.pedro', 2), -- 2-3
+	(105.46, now(), now(), FALSE, '248.934.605-95', 'valentina.giovana', 3), -- 3-4
+	(108.46, now(), now(), FALSE, '037.412.268-74', 'miguel.murilo', 4), -- 4-5
+	(109.46, now(), now(), FALSE, '148.506.661-16', 'gustavo.caio', 5); -- 1-5
 
+-- PEDIDO_CARDÁPIO
+
+INSERT INTO Pedido_Cardapio(fk_codigo_pedido, fk_codigo_cardapio)
+	VALUES
+	(1, 1),
+	(2, 3),
+	(3, 4),
+	(4, 5),
+	(1, 5);
 
 
 
