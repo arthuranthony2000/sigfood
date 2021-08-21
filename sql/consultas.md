@@ -13,8 +13,8 @@
 10. Encontre o nome de todos os grupos
 
 ### consultas complexas
-11. Encontre o nome de todos os usuários
-12. Encontre o username de todos os administradores
-13. Encontre o nome e username dos consumidores
+11. Encontre o username de todos os usuários que são administradores
+12. Encontre o username de todos os usuário suqe são consumidores
+13. Encontre todos os administradores que fazem parte do grupo A
 14. Encontre o nome dos consumidores que consumiram o prato A
-15. Encontre qual ingrediente tem o prato A
+15. Encontre quais ingredientes fazem parte do prato A
