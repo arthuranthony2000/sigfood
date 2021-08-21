@@ -59,7 +59,7 @@ FROM grupo;
 SELECT u.username
 FROM usuario u
 INNER JOIN administrador a
-ON u.username = a.fk_username_usuario
+ON u.username = a.fk_username_usuario;
 
 -- 12. Encontre o username de todos os usuários que são consumidores
 
@@ -91,13 +91,4 @@ WHERE ca.nome = 'Prato A')));
 SELECT ig.nome FROM ingrediente ig
 WHERE ig.codigo IN (SELECT ci.fk_codigo_ingrediente FROM cardapio_ingrediente ci
 WHERE ci.fk_codigo_cardapio = (SELECT ca.codigo FROM cardapio ca WHERE ca.nome = 'Prato A'));
-
-
-
-
-
-
-
-
-
 
