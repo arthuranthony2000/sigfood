@@ -170,6 +170,3 @@ INSERT INTO Pedido_Cardapio(fk_codigo_pedido, fk_codigo_cardapio)
 	(4, 5),
 	(1, 5);
 
-
-
-
